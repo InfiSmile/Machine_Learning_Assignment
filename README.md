@@ -77,7 +77,7 @@ The weights and bias are updated as follows:
 
 ```math
 \mathbf{w} = \mathbf{w} - \alpha \frac{2}{n} X^T \left( y_{\text{pred}} - y \right)
-
+```
 
 ```math
 b = b - \alpha \frac{2}{n} \sum \left( y_{\text{pred}} - y \right)
