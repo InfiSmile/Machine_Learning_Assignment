@@ -1,33 +1,6 @@
-# 📊 Linear Regression from Scratch
+# 📊 Linear Regression
 
-This repository implements **Linear Regression** from scratch using Python. It includes model training, loss visualization, prediction functionalities, and allows testing on unseen data. It's a great starting point for understanding Linear Regression without relying on external machine learning libraries.
-
-## 📖 Introduction
-
-Linear Regression is a fundamental algorithm for predictive analysis. This project implements Linear Regression using only NumPy and is trained on the **Boston Housing Dataset** to predict housing prices based on various features. Along with training, we provide tools for:
-
-- Plotting the loss over iterations.
-- Comparing actual vs. predicted values.
-- Predicting target values on test data and saving results in CSV format.
-
-## 📂 Project Structure
-
-```plaintext
-📦 Linear-Regression-Scratch
- ┣ 📜 main.py               # Entry point for the project
- ┣ 📜 model.py              # Linear Regression model class
- ┣ 📜 plot_utils.py         # Utility functions for plotting
- ┣ 📜 train.csv             # Training dataset
- ┣ 📜 test.csv              # Test dataset
- ┗ 📜 README.md             # Documentation
-
-
-Certainly! Here is the `README.md` file content formatted for easy copying:
-
-```markdown
-# 📊 Linear Regression from Scratch
-
-This repository implements **Linear Regression** from scratch using Python. It includes model training, loss visualization, prediction functionalities, and allows testing on unseen data. It's a great starting point for understanding Linear Regression without relying on external machine learning libraries.
+This repository implements **Linear Regression** using Python numpy and pandas. It includes model training, loss visualization, prediction functionalities, and allows testing on unseen data. It's a great starting point for understanding Linear Regression without relying on external machine learning libraries.
 
 ## 📖 Introduction
 
@@ -36,6 +9,30 @@ Linear Regression is a fundamental algorithm for predictive analysis. This proje
 - Plotting the loss over iterations.
 - Comparing actual vs. predicted values.
 - Predicting target values on test data and saving results in CSV format.
+
+## 📊 Dataset
+
+### Description
+This dataset contains housing values in suburbs of Boston, with the target variable being `medv` (median value of owner-occupied homes in $1000s).
+
+### Data Description
+The Boston data frame has 506 rows and 14 columns. It includes the following features:
+
+- **crim**: Per capita crime rate by town.
+- **zn**: Proportion of residential land zoned for lots over 25,000 sq.ft.
+- **indus**: Proportion of non-retail business acres per town.
+- **chas**: Charles River dummy variable (= 1 if tract bounds river; 0 otherwise).
+- **nox**: Nitrogen oxides concentration (parts per 10 million).
+- **rm**: Average number of rooms per dwelling.
+- **age**: Proportion of owner-occupied units built prior to 1940.
+- **dis**: Weighted mean of distances to five Boston employment centers.
+- **rad**: Index of accessibility to radial highways.
+- **tax**: Full-value property-tax rate per $10,000.
+- **ptratio**: Pupil-teacher ratio by town.
+- **black**: 1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town.
+- **lstat**: Lower status of the population (percent).
+- **medv**: Median value of owner-occupied homes in $1000s (target variable).
+
 
 ## 📂 Project Structure
 
@@ -48,33 +45,9 @@ Linear Regression is a fundamental algorithm for predictive analysis. This proje
  ┣ 📜 test.csv              # Test dataset
  ┗ 📜 README.md             # Documentation
 ```
-
-- **`main.py`**: Orchestrates data loading, model training, testing, and visualization.
-- **`model.py`**: Contains the Linear Regression model implementation.
-- **`plot_utils.py`**: Functions for generating loss plots and prediction comparisons.
-- **`train.csv`**: Training dataset containing features and target prices.
-- **`test.csv`**: Test dataset used for generating predictions.
-
 ---
 
-## ✨ Features
 
-- **Linear Regression** implementation from scratch using NumPy.
-- **Gradient Descent**-based optimization.
-- **Training** and **Validation** of the model.
-- **Visualization** of loss over iterations.
-- Visualization of **Actual vs Predicted** values for both training and validation sets.
-- **Test set predictions** saved to a CSV file.
-
----
-
-## ⚙️ Usage
-
-To run the project and train the model, use the following command:
-
-```bash
-python main.py
-```
 
 This will:
 
@@ -101,19 +74,23 @@ The loss function, also known as the **Mean Squared Error (MSE)**, is computed a
 
 The weights and bias are updated as follows:
 
+
 ```math
 \mathbf{w} = \mathbf{w} - \alpha \frac{2}{n} X^T \left( y_{\text{pred}} - y \right)
-```
+
 
 ```math
 b = b - \alpha \frac{2}{n} \sum \left( y_{\text{pred}} - y \right)
 ```
 
-Where:
-- \( \mathbf{w} \) is the weight vector.
-- \( b \) is the bias term.
-- \( \alpha \) is the learning rate.
 
+```
+Where:
+- `w` is the weight vector.
+- `b` is the bias term.
+- `α` (alpha) is the learning rate.
+
+```
 ---
 
 ## 📊 Testing on Test Data
